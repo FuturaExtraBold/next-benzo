@@ -1,9 +1,7 @@
-function Header() {
+export default function Header() {
   return (
     <header>
-      <h1>Next.js Example on Now 2.0</h1>
+      <h1>This is the Header</h1>
     </header>
   );
 }
-
-export default Header;
