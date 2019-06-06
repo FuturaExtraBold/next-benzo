@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "benzoAgain",
+  "name": "benzovthree",
   "builds": [{
     "src": "package.json",
     "use": "@now/next"
