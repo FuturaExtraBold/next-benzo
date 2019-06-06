@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import Link from "next/link";
 import fetch from "isomorphic-unfetch";
+
+import Client from "../components/Client";
+import ProjectSlide from "../components/ProjectSlide";
 
 class Index extends Component {
 
@@ -18,16 +20,12 @@ class Index extends Component {
       <div>
         <div className="clients">
           {this.props.data.clients.map((client, index) => (
-            <img key={ index } style={{ width: "60px" }} src={ `http://www.davidahays.com/cdn/img/clients/${ client.img }` } alt={ client.alt } />
+            <Client key={ index } { ...client } />
           ))}
         </div>
         <div className="projects">
           {this.props.data.projects.map((project, index) => (
-            <Link key={ project.pretty } href={ `projects/${ project.pretty }` }>
-              <div className="project">
-                <img style={{ width: "60px", float: "left" }} src={ `http://www.davidahays.com/cdn/img/thumbs/${ project.thumb }` }/>
-              </div>
-            </Link>
+            <ProjectSlide key={ project.pretty } { ...project } />
           ))}
         </div>
       </div>
