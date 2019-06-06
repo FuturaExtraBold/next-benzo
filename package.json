@@ -1,8 +1,9 @@
 {
   "scripts": {
     "build": "next build",
-    "dev": "next",
-    "now-build": "next build"
+    "dev": "node server.js",
+    "now-build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
