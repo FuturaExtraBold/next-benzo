@@ -18,16 +18,16 @@ class Index extends Component {
   render () {
     return (
       <div>
-        <div className="clients">
+        <section className="clients">
           {this.props.data.clients.map((client, index) => (
             <Client key={ index } { ...client } />
           ))}
-        </div>
-        <div className="projects">
+        </section>
+        <section className="projects">
           {this.props.data.projects.map((project, index) => (
             <ProjectSlide key={ project.pretty } { ...project } />
           ))}
-        </div>
+        </section>
       </div>
     );
   }

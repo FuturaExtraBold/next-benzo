@@ -1,5 +1,5 @@
 import React from "react";
-import fetch from 'isomorphic-unfetch';
+import fetch from "isomorphic-unfetch";
 
 const Project = ({ data }) => {
   return (
