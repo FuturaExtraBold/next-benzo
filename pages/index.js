@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import fetch from "isomorphic-unfetch";
 
-import Client from "../components/Client";
+import Clients from "../components/Clients";
 import ProjectSlide from "../components/ProjectSlide";
 
 import "../stylesheets/all.scss";
@@ -25,11 +25,7 @@ class Index extends Component {
             <ProjectSlide key={ project.pretty } { ...project } />
           ))}
         </section>
-        <section className="clients">
-          {this.props.data.clients.map((client, index) => (
-            <Client key={ index } { ...client } />
-          ))}
-        </section>
+        <Clients data={ this.props.data.clients } />
       </Fragment>
     );
   }
