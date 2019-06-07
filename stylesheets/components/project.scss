@@ -1,0 +1,9 @@
+.project {
+  @include grid-col(3);
+  margin-bottom: $gutter;
+  &__placeholder {
+    height: 1px;
+    padding-bottom: 75%;
+    background-color: $color-light;
+  }
+}
