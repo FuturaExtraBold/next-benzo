@@ -3,7 +3,6 @@ import React from "react";
 import Client from "../components/Client";
 
 const Clients = (props) => {
-  console.log("props:", props);
   return (
     <section className="clients">
       <div className="container">

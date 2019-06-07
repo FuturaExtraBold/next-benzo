@@ -3,7 +3,6 @@ import React from "react";
 import Project from "../components/Project";
 
 const Projects = (props) => {
-  console.log("Projects props:", props);
   return (
     <section className="projects">
       <div className="container">
