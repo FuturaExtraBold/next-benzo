@@ -5,8 +5,6 @@ import Clients from "../components/Clients";
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
 
-import "../stylesheets/all.scss";
-
 class Index extends Component {
 
   static async getInitialProps() {

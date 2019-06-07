@@ -13,7 +13,7 @@ app
     const server = express();
 
     server.get("/projects/:id", (req, res) => {
-      const actualPage = "/project";
+      const actualPage = "/detail";
       const queryParams = { id: req.params.id };
       console.log("queryParams:", queryParams);
       app.render(req, res, actualPage, queryParams);
