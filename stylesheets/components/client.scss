@@ -7,6 +7,12 @@
   @media (min-width: $md-min) {
     @include grid-col(2);
   }
+  @media (min-width: $lg-min) {
+    @include grid-col(2);
+  }
+  @media (min-width: $xl-min) {
+    @include grid-col(1);
+  }
   &__placeholder {
     height: 1px;
     padding-bottom: 75%;

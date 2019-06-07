@@ -1,6 +1,15 @@
 .project {
-  @include grid-col(3);
+  @include grid-col(6);
   margin-bottom: $gutter;
+  @media (min-width: $sm-min) {
+    @include grid-col(4);
+  }
+  @media (min-width: $md-min) {
+    @include grid-col(3);
+  }
+  @media (min-width: $lg-min) {
+    @include grid-col(2);
+  }
   &__placeholder {
     height: 1px;
     padding-bottom: 75%;
