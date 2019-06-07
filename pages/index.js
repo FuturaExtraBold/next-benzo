@@ -4,6 +4,7 @@ import fetch from "isomorphic-unfetch";
 import Clients from "../components/Clients";
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
+import Video from "../components/Video";
 
 class Index extends Component {
 
@@ -20,6 +21,7 @@ class Index extends Component {
   render () {
     return (
       <Layout>
+        <Video />
         <Projects data={ this.props.data.projects } />
         <Clients data={ this.props.data.clients } />
       </Layout>
