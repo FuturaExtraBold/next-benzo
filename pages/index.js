@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import fetch from "isomorphic-unfetch";
 
 import Clients from "../components/Clients";
-import ProjectSlide from "../components/ProjectSlide";
+import Projects from "../components/Projects";
 
 import "../stylesheets/all.scss";
 
@@ -20,11 +20,7 @@ class Index extends Component {
   render () {
     return (
       <Fragment>
-        <section className="projects">
-          {this.props.data.projects.map((project, index) => (
-            <ProjectSlide key={ project.pretty } { ...project } />
-          ))}
-        </section>
+        <Projects data={ this.props.data.projects } />
         <Clients data={ this.props.data.clients } />
       </Fragment>
     );
