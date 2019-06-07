@@ -1,8 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import fetch from "isomorphic-unfetch";
 
 import Client from "../components/Client";
 import ProjectSlide from "../components/ProjectSlide";
+
+import "../stylesheets/all.scss";
 
 class Index extends Component {
 
@@ -17,18 +19,18 @@ class Index extends Component {
 
   render () {
     return (
-      <div>
-        <section className="clients">
-          {this.props.data.clients.map((client, index) => (
-            <Client key={ index } { ...client } />
-          ))}
-        </section>
+      <Fragment>
         <section className="projects">
           {this.props.data.projects.map((project, index) => (
             <ProjectSlide key={ project.pretty } { ...project } />
           ))}
         </section>
-      </div>
+        <section className="clients">
+          {this.props.data.clients.map((client, index) => (
+            <Client key={ index } { ...client } />
+          ))}
+        </section>
+      </Fragment>
     );
   }
 }
